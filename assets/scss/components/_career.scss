@@ -1,0 +1,116 @@
+/*----------------------------------------*/
+/*  23. career
+/*----------------------------------------*/
+.career-img {
+    img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+}
+.xb-career {
+    padding: 40px 0;
+    padding-top: 25px;
+    padding-left: 36px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    min-height: 140px;
+    @include respond(xs) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .xb-item {
+        &--title {
+            font-size: 30px;
+            line-height: 38px;
+            color: var(--color-white);
+            text-transform: uppercase;
+            width: 45%;
+            margin-top: 15px;
+            @include respond(md) {
+                width: 100%;
+            }
+            @include respond(xs) {
+                font-size: 22px;
+                line-height: 30px;
+            }
+            a {
+                color: currentColor;
+            }
+        }
+        &--price {
+            font-size: 24px;
+            color: var(--color-white);
+            margin-right: 130px;
+            margin-top: 15px;
+            display: inline-block;
+            @include respond(lg) {
+                margin-right: 50px;
+            }
+            span {
+                font-size: 18px;
+                color: #858585;
+            }
+        }
+        &--location {
+            font-size: 22px;
+        }
+        &--holder {
+            margin-top: 15px;
+            p {
+                font-style: 18px;
+            }
+        }
+    }
+}
+.career-cta {
+    background-color: #16171B;
+    padding: 120px 90px;
+    padding-top: 90px;
+    @include respond(xs) {
+        padding: 50px 30px;
+        padding-top: 20px;
+    }
+    .xb-item {
+        &--holder {
+            width: 50%;
+            @include respond(md) {
+                width: 100%;
+            }
+        }
+        &--title {
+            font-size: 30px;
+            margin-bottom: 13px;
+            text-transform: uppercase;
+        }
+    }
+}
+.career-blur {
+    position: absolute;
+    right: 0;
+    width: 411px;
+    height: 411px;
+    filter: blur(176px);
+    bottom: -65px;
+    right: 22%;
+    @include respond(md) {
+        width: 300px;
+        height: 300px;
+        bottom: 100px;
+    }
+}
+.career-sec-subtitle {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    color: var(--color-white);
+    display: inline-block;
+    @include respond(xs) {
+        position: unset;
+        margin-top: 30px;
+    }
+}

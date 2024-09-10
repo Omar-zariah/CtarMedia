@@ -1,0 +1,367 @@
+/*----------------------------------------*/
+/*  04. hero
+/*----------------------------------------*/
+.hero {
+    &__contant {
+        .title {
+            font-size: 115px;
+            text-transform: uppercase;
+            line-height: 120.5px;
+            letter-spacing: -3.45px;
+            @include respond(lg) {
+                font-size: 90px;
+                line-height: 100px;
+                letter-spacing: -2.45px;
+            }
+            @include respond(md) {
+                font-size: 75px;
+                line-height: 80px;
+            }
+            @include respond(xs) {
+                font-size: 40px;
+                line-height: 42px;
+            }
+            span {
+                &.sp-one {
+                    color: var(--color-primary);
+                }
+                &.sp-two {
+                    color: #868686;
+                }
+            }
+        }
+    }
+    &__main-img {
+        top: -105px;
+        z-index: -1;
+        @include respond(md) {
+            top: -80px;
+        }
+        @include respond(xs) {
+            top: -40px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(183deg, #000 5.45%, rgba(0, 0, 0, 0.00) 40.99%);
+        }
+    }
+    &__shape {
+        @include respond(xs) {
+            display: none;
+        }
+        .shape {
+            position: absolute;
+            height: 84px;
+            width: 84px;
+            border-radius: 50%;
+            right: 52px;
+            top: 77px;
+            @include respond(md) {
+                width: 60px;
+                height: 60px;
+                right: 20px;
+            }
+            &--1 {
+                background: var(--color-primary);
+                z-index: 1;
+                margin-right: -52px;
+                display: inline-block;
+                @include respond(md) {
+                    margin-right: -33px;
+                }
+            }
+            &--2 {
+                border: 2px solid #FFF;
+                display: inline-block;
+            }
+        }
+    }
+    &__bg-blur {
+        right: -25px;
+        bottom: 9%;
+        position: absolute;
+    }
+    &__content-two {
+        .xb-item {
+            &--title {
+                font-size: 80px;
+                line-height: 110px;
+                letter-spacing: -2.4px;
+                text-transform: uppercase;
+                margin-bottom: 26px;
+                @include respond(laptop) {
+                    font-size: 63px;
+                    line-height: 90px;
+                }
+                @include respond(lg) {
+                    font-size: 60px;
+                    line-height: 86px;
+                    letter-spacing: -1.4px;
+                }
+                @include respond(xs) {
+                    font-size: 38px;
+                    line-height: 56px;
+                    letter-spacing: 0;
+                }
+                .span--one {
+                    color: var(--color-primary);
+                }
+                .span--two {
+                    color: #868686;
+                }
+            }
+            &--sub_title {
+                font-size: 20px;
+                line-height: 32px;
+                margin-bottom: 40px;
+                @include respond(laptop) {
+                    max-width: 600px;
+                }
+                @include respond(lg) {
+                    max-width: 500px;
+                }
+            }
+            &--button {
+                margin-bottom: 80px;
+                @include respond(md) {
+                    margin-bottom: 40px;
+                }
+                @include respond(xs) {
+                    margin-bottom: 10px;
+                }
+            }
+            &--counter {
+                .inner {
+                    &:not(:last-child) {
+                        margin-right: 73px;
+                        @include respond(xs) {
+                            margin-right: 20px;
+                        }
+                    }
+                    .icon {
+                        display: flex;
+                        margin-right: 22px;
+                    }
+                    .holder {
+                        .number {
+                            font-size: 60px;
+                            line-height: 1;
+                            letter-spacing: -1.2px;
+                            font-weight: 400;
+                            margin-bottom: 9px;
+                            @include respond(xs) {
+                                font-size: 48px;
+                            }
+                            .suffix {
+                                transform: translateY(5px);
+                                position: relative;
+                                display: inline-block;
+                                padding-left: 19px;
+                                @include respond(xs) {
+                                    line-height: 1;
+                                }
+                            }
+                        }
+                        .content {
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #FFFFFF;
+                            text-transform: uppercase;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hero-right_site {
+        position: absolute;
+        right: -25%;
+        top: 72px;
+        z-index: 1;
+        @include respond(laptop) {
+            max-width: 900px;
+        }
+        @include respond(lg) {
+            max-width: 700px;
+        }
+        @include respond(md) {
+            position: relative;
+            margin-top: 30px;
+            right: 0;
+            top: 0;
+        }
+        &>img {
+            animation: spin 50s infinite linear;
+            -webkit-animation: spin 50s infinite linear;
+        }
+
+        .hero-video {
+            position: absolute;
+            left: 5.5%;
+            bottom: 29%;
+            width: 105px;
+            height: 105px;
+            @include border-radius(50%);
+            border: 1px solid var(--color-primary);
+            background-color: #1D2026;
+            z-index: 2;
+            @include center;
+            @include respond(xs) {
+                bottom: 58%;
+                width: 80px;
+                height: 80px;
+            }
+            .shape-border {
+                position: absolute;
+                top: -29px;
+                left: -29px;
+                @include respond(xs) {
+                    top: -17px;
+                    left: -17px;
+                    svg {
+                        width: 110px;
+                        height: 110px;
+                    }
+                }
+            }
+        }
+
+        .play-text {
+            position: absolute;
+            bottom: 14px;
+            right: -95px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+}
+.hero-style-two {
+    min-height: 1050px;
+    @include respond(lg) {
+        min-height: 900px;
+    }
+    @include respond(md) {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+    @include respond(xs) {
+        font-size: 38px;
+        line-height: 62px;
+        padding-bottom: 83px;
+        padding-top: 60px;
+    }
+}
+.hero-style-three {
+    min-height: 1002px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include respond(laptop) {
+        min-height: 900px;
+    }
+    @include respond(lg) {
+        min-height: 750px;
+        padding-bottom: 72px;
+    }
+    @include respond(md) {
+        min-height: 635px;
+        padding-bottom: 55px;
+    }
+    @include respond(xs) {
+        padding-bottom: 0;
+    }
+    .hero-sec-title-htree {
+        .title {
+            font-size: 115px;
+            line-height: 120.5px;
+            letter-spacing: -3.45px;
+            margin-bottom: 40px;
+            @include respond(laptop) {
+                font-size: 90px;
+                line-height: 110px;
+            }
+            @include respond(lg) {
+                font-size: 70px;
+                font-weight: 400;
+                line-height: 84px;
+                letter-spacing: -1.45px;
+            }
+            @include respond(md) {
+                font-size: 56px;
+                line-height: 64px;
+            }
+            @include respond(xs) {
+                font-size: 40px;
+                line-height: 52px;
+                letter-spacing: 0;
+                margin-bottom: 20px;
+            }
+        }
+        .sub-title {
+            margin-bottom: 28px;
+        }
+        .sub-content {
+            font-size: 22px;
+            letter-spacing: 0.66px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: #DDD;
+            margin-bottom: 75px;
+            @include respond(md) {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .heo-sec-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        @include respond(laptop) {
+            max-width: 800px;
+        }
+        @include respond(lg) {
+            max-width: 700px;
+            right: -5%;
+        }
+        @include respond(md) {
+            max-width: 500px;
+            right: -8%;
+        }
+        @include respond(xs) {
+           position: unset;
+        }
+    }
+}
+.hero-cirlce-shape {
+    position: absolute;
+    right: -16%;
+    bottom: -61%;
+    z-index: -2;
+    @include respond(laptop) {
+        right: -15%;
+        max-width: 1000px;
+    }
+    @include respond(lg) {
+        right: -28%;
+        max-width: 1000px;
+    }
+    @include respond(md) {
+        right: -29%;
+        max-width: 650px;
+        bottom: -48%;
+    }
+    img {
+        animation: spin 50s infinite linear;
+        -webkit-animation: spin 50s infinite linear;
+    }
+}

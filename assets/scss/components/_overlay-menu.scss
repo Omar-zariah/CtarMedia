@@ -1,0 +1,334 @@
+/* OVERLAY MENU */
+.overlay-menu{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    text-align: center;
+    z-index: 102;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .overlay-menu .close{
+    position: absolute;
+    right: 60px;
+    top: 55px;
+    cursor: pointer;
+    opacity: .5;
+    z-index: 10;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    background: color;
+  }
+  
+  .overlay-menu .close:hover{
+    opacity: 1;
+  }
+  
+  
+  .overlay-menu .left-area, .overlay-menu .right-area{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .overlay-menu .left-area{
+    padding-left: 10vw;
+  }
+  
+  .overlay-menu .right-area{
+    padding-left: 3vw;
+  }
+  
+  .overlay-menu .right-area ul{
+    margin-bottom: 30px;
+  }
+  
+  .overlay-menu .right-area ul li{
+    list-style: none;
+    line-height: 30px;
+  }
+  
+  .overlay-menu .right-area ul li a{
+    color: #A8A8A8;
+  }
+  
+  .overlay-menu .right-area ul li p{
+    margin: 0;
+    color: #A8A8A8;
+  }
+  
+  .overlay-menu .right-area ul li span.title{
+    color: #fff;
+    margin-bottom:20px;
+    font-size: 30px;
+    display: inline-block;
+  }
+  
+  .overlay-menu .overlay-wrap{
+    height: 100vh;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area{
+    text-align: left;
+    background: #000;
+  }
+  
+  .overlay-menu .overlay-wrap .right-area{
+    text-align: left;
+    background: #16171B;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav{
+    position: relative;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav ul{
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav li{
+    list-style: none;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav li a{
+    font-size: 60px;
+    line-height: 90px;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav li.current-menu-item > a{
+    color: #666666;
+    pointer-events: none;
+  }
+  
+  
+  .overlay-menu .overlay-wrap .left-area nav li.current-menu-item > a:before{
+    opacity: 1;
+    left: -35px;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav li.menu-item-has-children > a:after{
+    content: "\f061";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    right: -50px;
+    top: 8px;
+    font-size: 25px;
+    color: #fff;
+    opacity: 0;
+    @include transform(translateY(30px) rotate(30deg));
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav li.menu-item-has-children:hover > a:after{
+    opacity: .4;
+    @include transform(translateY(0) rotate(30deg));
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav li a:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: rgb(81, 81, 81);
+    position: absolute;
+    border-radius: 30px;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    opacity: 0;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+  }
+  
+  
+  .overlay-menu .overlay-wrap .left-area nav li:not(li.menu-item-has-children) a:hover:before{
+    opacity: 1;
+    left: -35px;
+  }
+  
+  .overlay-menu .overlay-wrap .left-area nav li ul{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+  
+  .overlay-menu .overlay-wrap .right-area .social-links{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .overlay-menu .overlay-wrap .right-area .social-links li{
+    float: left;
+  }
+  
+  .overlay-menu .overlay-wrap .right-area .social-links a{
+    float: right;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 30px;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+  }
+  
+  .overlay-menu .overlay-wrap .right-area .social-links a:after{
+    content: "\f061";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 16px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+  }
+  
+  .overlay-menu .overlay-wrap .right-area .social-links a:hover{
+    color: #fff;
+  }
+  
+  .overlay-menu .overlay-wrap .right-area .social-links a:hover:after{
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+  }
+  
+  .overlay-menu .back{
+    line-height: 45px !important;
+    opacity: .3 !important;
+    transition: opacity ease .2s;
+    -webkit-transition: opacity ease .2s;
+    -moz-transition: opacity ease .2s;
+    -ms-transition: opacity ease .2s;
+    -o-transition: opacity ease .2s;
+  }
+  
+  .overlay-menu .back:hover{
+    opacity: 1 !important;
+  }
+  
+  .overlay-menu .back::before{
+    display: none;
+  }
+  
+  .overlay-menu .back:after {
+    content: "\f061";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    right: -40px;
+    top:11px;
+    font-size: 21px;
+    @include transform(rotate(-140deg));
+  }
+  .overlay-menu .xb-close {
+    width: 45px;
+    height: 45px;
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+  
+  @media screen and (max-width: 420px) {
+  
+    .xb-header-menu {
+      width: 100%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 1024px) {
+  
+    .header-container {
+      padding: 45px;
+    }
+  
+    .slider-bottom{
+      padding: 45px !important;
+    }
+  
+    .overlay-menu .close{
+      right: 45px;
+      top: 45px;
+    }
+  
+  
+    .overlay-menu .right-area ul{
+      padding: 0;
+      padding-left: 15px;
+    }
+  
+    .overlay-menu .overlay-wrap .left-area nav li a {
+      font-size: 55px;
+      line-height: 80px;
+  }
+    
+  }
+  .overlay-menu-two .overlay-wrap .left-area {
+    background: #060613;
+  }
+  .overlay-menu-two .overlay-wrap .right-area {
+    background-color: #151521;
+  }
+  .overlay-menu-three .overlay-wrap .left-area {
+    background: #020202;
+  }
+  .overlay-menu-thee .overlay-wrap .right-area {
+    background-color: #242424;
+  }

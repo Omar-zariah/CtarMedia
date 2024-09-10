@@ -1,0 +1,41 @@
+/*----------------------------------------*/
+/*  18. funfact
+/*----------------------------------------*/
+.xb-funfact {
+    .xb-item {
+        &--number {
+            font-size: 40px;
+            font-weight: 400;
+            margin-bottom: 18px;
+        }
+        &--title {
+            font-weight: 400;
+            letter-spacing: -0.16px;
+            color: #828282;
+            text-transform: uppercase;
+        }
+    }
+    .suffix {
+        padding-left: 10px;
+    }
+}
+.funfact-img {
+    max-width: 740px;
+    margin: 0 auto;
+    img {
+        mix-blend-mode: luminosity;
+        box-shadow: 0px 11px 16px 0px rgba(0, 0, 0, 0.34), -15px 0px 15px 0px rgba(0, 0, 0, 0.30);
+    }
+    .funfact-btn {
+        position: absolute;
+        right: -67px;
+        top: 50%;
+        @include transform(translateY(-50%));
+        @include respond(md) {
+            right: -20px;
+        }
+        @include respond(xs) {
+            right: 0px;
+        }
+    }
+}

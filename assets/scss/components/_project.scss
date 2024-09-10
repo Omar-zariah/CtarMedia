@@ -1,0 +1,105 @@
+/*----------------------------------------*/
+/*  11. project
+/*----------------------------------------*/
+.pm-title {
+    font-size: 60px;
+    line-height: 61.5px;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+    @include respond(md) {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+.ap-inner {
+    .ap-title {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -0.32px;
+        text-transform: uppercase;
+        @include respond(xs) {
+            font-size: 24px;
+        }
+    }
+    .ap-sub-title {
+        font-size: 22px;
+        line-height: 36px;
+        letter-spacing: -0.22px;
+        text-transform: uppercase;
+        color:rgba(255, 255, 255, 0.5);
+        @include respond(xs) {
+            font-size: 18px;
+        }
+    }
+}
+.ap-content {
+    font-size: 20px;
+    text-transform: lowercase;
+    line-height: 30px;
+    @include respond(xs) {
+        font-size: 18px;
+    }
+}
+.ap-link {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    letter-spacing: -0.22px;
+    color: #FFF;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    &:hover {
+        color: #FFF;
+    }
+    span {
+        height: 60px;
+        width: 60px;
+        background: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        margin-left: 8px;
+        color: #292D32;
+    }
+}
+.pd-title {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.pd-details {
+    .pd-list {
+        li {
+            font-size: 20px;
+        }
+    }
+}
+.pd-result {
+    margin-left: 165px;
+    @include respond(md) {
+        margin-left: 0;
+    }
+}
+.pd-wrpper {
+    margin-bottom: 55px;
+    .pd-parcentage {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 5px;
+    }
+    .pd-contect {
+        font-weight: 400;
+        color: #828282;
+        text-transform: uppercase;
+    }
+}
+.pd-poster-title {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.pd-image {
+    filter: grayscale(100%);
+}

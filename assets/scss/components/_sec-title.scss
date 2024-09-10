@@ -1,0 +1,182 @@
+.section-title {
+    .sub-title{
+        color: #DDDDDD;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.7px;
+        font-size: 14px;
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        display: inline-block;
+        &::before{
+            content: "";
+            height: 10px;
+            width: 10px;
+            background: var(--color-primary);
+            border-radius: 50px;
+            top: 50%;
+            left: 0;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+    }
+    .title{
+        color: #fff;
+        font-size: 60px;
+        letter-spacing: -1.2px;
+        line-height: 61.5px;
+        text-transform: uppercase;
+        display: inline-block;
+        @include respond(lg) {
+            font-size: 42px;
+            letter-spacing: -1px;
+            line-height: 50px;
+        }
+        @include respond(xs) {
+            font-size: 32px;
+            letter-spacing: 0;
+            line-height: 38.5px;
+        }
+        span{
+            color: #868686;
+            span {
+                color: var(--color-primary);
+            }
+        }
+    }
+    &--two {
+        .sub-title {
+            color: #1D2026;
+            letter-spacing: 0.7px;
+            line-height: 32px;
+            margin-bottom: 50px;
+            padding-left: 0;
+            position: unset;
+            @include respond(xs) {
+                margin-bottom: 28px;
+            }
+            &::before {
+                display: none;
+            }
+           
+        }
+        .title {
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 61.5px;
+            letter-spacing: -1.2px;
+            text-transform: lowercase;
+            color: #1D2026;
+            @include respond(lg) {
+                font-size: 46px;
+                line-height: 57px;
+            }
+            @include respond(md) {
+                font-size: 38px;
+                line-height: 50px;
+            }
+            @include respond(xs) {
+                font-size: 27px;
+                line-height: 40px;
+                br {
+                    display: none;
+                }
+            }
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+        .number {
+            position: absolute;
+            top: 10px;
+            left: -130px;
+            background: #1D2026;
+            height: 40px;
+            width: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            border-radius: 10px;
+        }
+    }
+    &--white {
+        .sub-title {
+            &::after {
+                background-color: #fff;
+            }
+        }
+        .sub-title,
+        .title{
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+        .number {
+            background: var(--color-primary);
+            color: var(--color-black);
+        }
+    }
+    &--size {
+        .title {
+            text-transform: uppercase;
+        }
+        .number {
+            background: #FFFFFF;
+            color: var(--color-black);
+        }
+    }
+    &--border {
+        .title {
+            position: relative;
+            span {
+                background-color: var(--color-black);
+                color: var(--color-white);
+                span {
+                    color: #868686;
+                }
+            }
+            &::before {
+                position: absolute;
+                bottom: 8px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: #fff;
+                opacity: .2;
+                content: "";
+                z-index: -1;
+            }
+        }
+    }
+}
+.xb-sec-title-border {
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 45px;
+        height: 2px;
+        background-color: #000;
+        height: 1px;
+        opacity: .2;
+        content: "";
+        left: 0;
+        right: 0;
+        width: 0;
+        transform: scaleX(0);
+        transform-origin: 0 100%;
+        transition: 1.5s;
+        @include respond(xs) {
+            top: 36px;
+        }
+    }
+    &.border-white::after {
+        background-color: var(--color-white);
+    }
+    &.triggered::after {
+        transform: scale(1);
+        width: 100%;
+    }
+}

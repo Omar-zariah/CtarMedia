@@ -1,0 +1,106 @@
+/*----------------------------------------*/
+/*  19. portfolio
+/*----------------------------------------*/
+.port-sec-title {
+    padding: 36px;
+    border: 1px solid rgba(130, 130, 130, 0.5);
+    @include center;
+    .sub-content {
+        color: #828282;
+        letter-spacing: -0.16px;
+        margin-bottom: 7px;
+        display: block;
+    } 
+}
+.portfolio-menu {
+    padding-right: 28px;
+    @include respond(md) {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+    button {
+        font-size: 18px;
+        color: #DDDDDD;
+        text-transform: uppercase;
+        background-color: transparent;
+        opacity: 0.5;
+        font-weight: 500;
+        letter-spacing: -0.18px;
+        position: relative;
+        padding: 0;
+        margin-bottom: 10px;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            width: 2px;
+            height: 10px;
+            @include transform(translateY(-50%));
+            background-color: var(--color-primary);
+            content: "";
+            opacity: 0;
+            @include transition(.3s);
+        }
+        &.active {
+            color: #DDDDDD;
+            opacity: 1;
+            &::before {
+                opacity: 1;
+                height: 28px;
+            }
+        }
+        &:not(:last-child) {
+            margin-right: 40px;
+            @include respond(lg) {
+                margin-right: 25px;
+            }
+        }
+    }
+}
+.portfolio-item {
+    @include respond(md) {
+        margin-top: 40px;
+    }
+}
+.xb-portfolio {
+    position: relative;
+    &:hover {
+        .xb-item {
+            &--img {
+                outline-color: var(--color-primary);
+                img {
+                    @include transform(scale(1.1));
+                }
+            }
+        }
+        .border-effect-2 a {
+            background-size: 100% 100%;
+            color: inherit;
+        }
+    }
+    .xb-item {
+        &--img {
+            @include transition(.3s);
+            overflow: hidden;
+            outline: 3px solid transparent;
+            outline-offset: -3px;
+            z-index: 2;
+            img {
+                @include transition(.3s);
+                z-index: -1;
+                position: relative;
+            }
+        }
+        &--title {
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: -0.22px;
+            color: var(--color-white);
+            text-transform: uppercase;
+            margin-top: 20px;
+            a {
+                color: currentColor;
+            }
+        }
+    }
+}

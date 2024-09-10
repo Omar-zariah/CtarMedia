@@ -1,0 +1,107 @@
+/*-----------------------------------------------------------------------------------
+
+    Project Name: Auxa - Digital Studio and Agency HTML Template
+    Author: XpressBuddy -->> (https://themeforest.net/user/xpressbuddy)
+    Support: support@xpressbuddy.com
+    Description: Auxa - Digital Studio and Agency HTML Template
+    Developer: Mohammad Wasim Mia -> contact@xpressbuddy.com
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+	01. Theme default CSS
+    02. header
+    03. global
+    04. hero
+    05. about
+    06. services
+    07. counter
+    08. marquee
+    09. team
+    10. cta
+    11. project
+    12. award
+    13. testimonial
+    14. blog
+    15. careear
+    16. feature
+    17. brand
+    18. funfact
+    19. portfolio
+    20. contact
+    21. breadcrumb
+    22. whyus
+    23. career
+    24. story
+    25. shop
+    26. faq
+    27. backtotop
+    28. mobile-menu
+    29. preloader
+
+-----------------------------------------------------------------------------------*/
+// abstracts scss
+@import
+    'abstracts/variables',
+    'abstracts/mixins';
+
+// base scss
+@import 
+    'base/fonts',
+    'base/base',
+    'base/spacing',
+    'base/typography',
+    'base/animation',
+    'base/overlay';
+
+// layout scss
+@import 
+    'layout/header',
+    'layout/navigation';
+ 
+// components scss
+@import 
+    'components/sec-title',
+    'components/global',
+    'components/hero',
+    'components/about',
+    'components/services',
+    'components/counter',
+    'components/marquee',
+    'components/team',
+    'components/cta',
+    'components/project',
+    'components/award',
+    'components/testimonial',
+    'components/blog',
+    'components/careear',
+    'components/feature',
+    'components/brand',
+    'components/funfact',
+    'components/portfolio',
+    'components/contact',
+    'components/breadcrumb',
+    'components/whyus',
+    'components/career',
+    'components/story',
+    'components/shop',
+    'components/faq',
+    'components/buttons',
+    'components/backtotop',
+    'components/mobile-menu',
+    'components/overlay-menu',
+    'components/preloader';
+
+// home scss
+@import 
+'layout/digital-marketing',
+'layout/digital-studio',
+'layout/branding';
+
+// layout scss
+@import
+    'layout/footer';
+ 

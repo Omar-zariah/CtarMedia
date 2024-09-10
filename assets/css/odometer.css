@@ -1,0 +1,113 @@
+.xbo.xbo-auto-theme,
+.xbo.xbo-theme-default {
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+	position: relative;
+}
+.xbo.xbo-auto-theme .xbo-digit,
+.xbo.xbo-theme-default .xbo-digit {
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+	position: relative;
+}
+.xbo.xbo-auto-theme .xbo-digit .xbo-digit-spacer,
+.xbo.xbo-theme-default .xbo-digit .xbo-digit-spacer {
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	*zoom: 1;
+	*display: inline;
+	visibility: hidden;
+}
+.xbo.xbo-auto-theme .xbo-digit .xbo-digit-inner,
+.xbo.xbo-theme-default .xbo-digit .xbo-digit-inner {
+	text-align: left;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.xbo.xbo-auto-theme .xbo-digit .xbo-ribbon,
+.xbo.xbo-theme-default .xbo-digit .xbo-ribbon {
+	display: block;
+}
+.xbo.xbo-auto-theme .xbo-digit .xbo-ribbon-inner,
+.xbo.xbo-theme-default .xbo-digit .xbo-ribbon-inner {
+	display: block;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.xbo.xbo-auto-theme .xbo-digit .xbo-value,
+.xbo.xbo-theme-default .xbo-digit .xbo-value {
+	display: block;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+}
+.xbo.xbo-auto-theme
+	.xbo-digit
+	.xbo-value.xbo-last-value,
+.xbo.xbo-theme-default
+	.xbo-digit
+	.xbo-value.xbo-last-value {
+	position: absolute;
+}
+.xbo.xbo-auto-theme.xbo-animating-up .xbo-ribbon-inner,
+.xbo.xbo-theme-default.xbo-animating-up .xbo-ribbon-inner {
+	-webkit-transition: -webkit-transform 2s;
+	-moz-transition: -moz-transform 2s;
+	-ms-transition: -ms-transform 2s;
+	-o-transition: -o-transform 2s;
+	transition: transform 2s;
+}
+.xbo.xbo-auto-theme.xbo-animating-up.xbo-animating
+	.xbo-ribbon-inner,
+.xbo.xbo-theme-default.xbo-animating-up.xbo-animating
+	.xbo-ribbon-inner {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.xbo.xbo-auto-theme.xbo-animating-down .xbo-ribbon-inner,
+.xbo.xbo-theme-default.xbo-animating-down
+	.xbo-ribbon-inner {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.xbo.xbo-auto-theme.xbo-animating-down.xbo-animating
+	.xbo-ribbon-inner,
+.xbo.xbo-theme-default.xbo-animating-down.xbo-animating
+	.xbo-ribbon-inner {
+	-webkit-transition: -webkit-transform 2s;
+	-moz-transition: -moz-transform 2s;
+	-ms-transition: -ms-transform 2s;
+	-o-transition: -o-transform 2s;
+	transition: transform 2s;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.xbo.xbo-auto-theme,
+.xbo.xbo-theme-default {
+	line-height: 1.1em;
+}
+.xbo.xbo-auto-theme .xbo-value,
+.xbo.xbo-theme-default .xbo-value {
+	text-align: center;
+}

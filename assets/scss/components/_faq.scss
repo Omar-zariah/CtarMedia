@@ -1,0 +1,175 @@
+/*----------------------------------------*/
+/*  26. faq
+/*----------------------------------------*/
+.accordion-wrapper {
+    padding-right: 113px;
+    padding-left: 10px;
+    @include respond(laptop) {
+        padding-right: 50px;
+    }
+    @include respond(lg) {
+        padding-right: 40px;
+    }
+    @include respond(md) {
+        padding-right: 0;
+    }
+}
+.accordion_box {
+	position: relative;
+    list-style: none;
+}
+.accordion_box .block {
+	position: relative;
+	overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.accordion_box .block:last-child {
+	margin-bottom: 0;
+}
+.accordion_box .block .acc-btn {
+	color: var(--color-white);
+	position: relative;
+	font-size: 22px;
+	cursor: pointer;
+	padding: 21px 0;
+    letter-spacing: -0.22px;
+    padding-right: 70px;
+    @include transition(all 500ms ease);
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    .arrow {
+        position: absolute;
+        right: 0;
+        top: 21px;
+        &::before {
+            top: 0;
+            right: 0;
+            content: "\f067";
+            font-weight: 400;
+            font-family: "Font Awesome 5 Pro";
+            font-size: 17px;
+            position: absolute;
+            @include transition(0.6s cubic-bezier(0.165, 0.84, 0.44, 1));   
+        }
+    }
+}
+.accordion_box .block .content {
+	position: relative;
+    padding-right: 40px;
+    padding-bottom: 25px;
+    p {
+        color: #838788;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    a {
+        color: var(--color-white);
+        font-size: 18px;
+        font-weight: 700;
+        &:hover {
+            span {
+                @include transform(translate(4px, -2px));
+            }
+        }
+        span {
+            margin-left: 10px;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            @include transition(.3s);
+        }
+    }
+}
+
+.accordion_box .block.active-block .acc-btn .arrow::before {
+	content: "\f068";
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+}
+.accordion_box .block .acc_body {
+	position: relative;
+	display: none;
+}
+.accordion_box .block .acc_body.current {
+	display: block;
+}
+.faq-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    @include respond(md) {
+        position: unset;
+        width: 100%;
+        height: 300px;
+        margin-top: 30px;
+    }
+}
+.xb-faq {
+    .accordion_box {
+        .block {
+            padding-left: 215px;
+            padding-right: 30px;
+            @include respond(lg) {
+                padding-left: 100px;
+            }
+            @include respond(xs) {
+                padding-left: 50px;
+                padding-right: 10px;
+            }
+            &:first-child {
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            .number {
+                position: absolute;
+                top: 37px;
+                left: 0;
+                font-size: 30px;
+                font-family: var(--font-heading);
+                color: #fff;
+                @include respond(xs) {
+                    font-size: 20px;
+                    top: 20px;
+                }
+            }
+            .acc-btn {
+                font-size: 30px;
+                padding: 33px 0;
+                line-height: 1.1;
+                @include respond(xs) {
+                    font-size: 20px;
+                    padding: 20px 0;
+                    padding-right: 20px;
+                }
+                .arrow {
+                    top: 36px;
+                    @include respond(xs) {
+                        top: 20px;
+                    }
+                    &::before {
+                        font-weight: 300;
+                        font-size: 24px;
+                        @include respond(xs) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .content {
+                max-width: 80%;
+                @include respond(lg) {
+                    max-width: 90%;
+                }
+                @include respond(md) {
+                    max-width: 100%;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

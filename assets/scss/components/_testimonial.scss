@@ -1,0 +1,241 @@
+/*----------------------------------------*/
+/*  13. testimonial
+/*----------------------------------------*/
+.xb-testimonial-wrapper {
+    background: #16171B;
+    padding: 70px 47px 109px;
+    height: 100%;
+    @include respond(xs) {
+        padding: 50px 30px;
+    }
+    .xb-item {
+        &--inner {
+            margin-bottom: 50px;
+        }
+        &--image {
+            display: flex;
+            margin-right: 22px;
+            position: relative;
+            img {
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+            }
+            &::before {
+                content: '\f10e';
+                color: #242424;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 900;
+                top: 0;
+                right: -4px;
+                height: 26px;
+                width: 26px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                background: var(--color-primary);
+                border-radius: 50px;
+                position: absolute;
+                z-index: 1;
+            }
+        }
+        &--holder {
+            width: calc(100% - 153px);
+        }
+        &--title {
+            text-transform: uppercase;
+            font-size: 20px;
+            span {
+                color: #838383;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .comment-box {
+        .comment-title {
+            font-size: 22px;
+            letter-spacing: -0.22px;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+        }
+        .comment {
+            color: #A8A8A8;
+            line-height: 30px;
+            margin-right: 11px;
+        }
+    }
+    .xb-icon {
+        position: absolute;
+        top: 63px;
+        right: 75px;
+        @include respond(lg) {
+            top: 55px;
+            right: 40px;
+            max-width: 120px;
+        }
+        @include respond(xs) {
+            top: 49px;
+            right: 28px;
+            max-width: 60px;
+        }
+    }
+}
+.testimonial-shape {
+    position: absolute;
+    left: 39.5%;
+    bottom: 305px;
+    height: 447px;
+    width: 447px;
+    background: var(--color-primary);
+    filter: blur(176px);
+}
+
+.testimonial-quote {
+    width: 407px;
+    height: 407px;
+    @include border-radius(50%);
+    @include center;
+    border: 1px solid rgba(178, 182, 184, 0.5);
+    @include respond(xs) {
+        width: 200px;
+        height: 200px;
+        img {
+            max-width: 80px;
+        }
+    }
+}
+.testimonial-inner {
+    padding-left: 35px;
+    @include respond(xs) {
+        padding-left: 0;
+    }
+}
+.xb-testimonial {
+    .xb-item {
+        &--holder,
+        &--title,
+        &--content,
+        &--avatar,
+        &--name,
+        &--desig {
+            opacity: 0;
+            visibility: hidden;
+            @include transform(translateY(30px));
+        }
+        &--holder {
+            max-width: 591px;
+        }
+        &--title {
+            font-size: 22px;
+            font-weight: 400;
+            letter-spacing: -0.22px;
+            margin-bottom: 27px;
+            text-transform: uppercase;
+        }
+        &--content {
+            line-height: 30px;
+        }
+        &--author {
+            margin-top: 13px;
+            margin-left: -145px;
+            @include respond(md) {
+                margin-top: 20px;
+                margin-left: 0;
+            }
+        }
+        &--avatar {
+            width: 90px;
+            height: 90px;
+            @include border-radius(50%);
+            overflow: hidden;
+            border: 5px solid var(--color-primary);
+            margin-bottom: 14px;
+            img {
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                
+            }
+        }
+        &--name {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.2px;
+            text-transform: uppercase;
+        }
+        &--desig {
+            color: #838383;
+            font-family: var(--font-heading);
+            line-height: 24px;
+            letter-spacing: -0.16px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+    }
+}
+.testimonial-slider {
+    .swiper-slide-active {
+        .xb-item {
+            &--holder,
+            &--title,
+            &--content,
+            &--avatar,
+            &--name,
+            &--desig {
+                opacity: 1;
+                visibility: visible;
+                @include transition(all 500ms cubic-bezier(0.25, 0.7, 0.58, 1));
+                @include transform(translateX(0));
+            }
+            &--content {
+                -webkit-transition-delay: 200ms;
+				transition-delay: 200ms;
+            }
+            &--avatar {
+                -webkit-transition-delay: 400ms;
+				transition-delay: 400ms;
+            }
+            &--name,
+            &--desig {
+                -webkit-transition-delay: 600ms;
+				transition-delay: 600ms;
+            }
+        } 
+    }
+}
+.testimonial-carousel {
+    position: absolute;
+    right: 96px;
+    bottom: 6px;
+    z-index: 1;
+    @include respond(md) {
+        right: 0;
+    }
+    @include respond(xs) {
+        position: unset;
+        margin-top: 30px;
+    }
+    .xb-swiper-arrow {
+        width: 76px;
+        height: 76px;
+        @include border-radius(50%);
+        background-color: rgba(255, 255, 255, 0.1);
+        @include center;
+        cursor: pointer;
+        @include transition(.3s);
+        img {
+            @include transition(.3s);
+        }
+        &:hover {
+            background-color: var(--color-primary);
+            img {
+                filter: brightness(0%);
+            }
+        }
+        &.xb-swiper-arrow-prev {
+            margin-right: 20px;
+        }
+    }
+}

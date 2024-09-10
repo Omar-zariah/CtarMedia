@@ -1,0 +1,51 @@
+/*----------------------------------------*/
+/*  17. brand
+/*----------------------------------------*/
+.xb-brand {
+    padding: 70px 0;
+    @include respond(md) {
+        padding: 40px 0;
+    }
+    a {
+        @include center;
+        min-height: 60px;
+        @include transition(.3s);
+        &:hover {
+            @include transform(translateY(-7px));
+        }
+    }
+}
+.brand-slider {
+    margin: 0 -55px;
+    @include respond(md) {
+        margin: 0 -30px;
+    }
+    @include respond(xs) {
+        margin: 0 -20px;
+    }
+    &.m-0 {
+        margin: 0;
+    }
+}
+.about-brand {
+    .about-slider {
+        background: #16171B;
+        margin: 0;
+    }
+    .xb-brand {
+        padding: 41px 0;
+        
+    }
+}
+.brand-slider-two {
+    .xb-brand {
+        padding: 20px 0;
+        a {
+            @include transition(.3s);
+            opacity: 0.5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

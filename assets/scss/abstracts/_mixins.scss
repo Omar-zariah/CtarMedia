@@ -1,0 +1,113 @@
+@mixin background($position: center,$size: cover,$repeat: no-repeat) {
+    background: {
+        position: $position;
+        repeat: $repeat;
+        size: $size;
+    }
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin border-radius($property) {
+  border-radius: $property;
+  -webkit-border-radius: $property;
+  -moz-border-radius: $property;
+  -ms-border-radius: $property;
+  -o-border-radius: $property;
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+@mixin flexWidth($property) {
+  flex: 0 0 $property;
+  -ms-flex: 0 0 $property;
+  max-width: $property;
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+@mixin d-flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin br-20 {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+@mixin shadow1 {
+  box-shadow: 0.975px 7.94px 21px 0px rgba(239, 239, 239, 0.5);
+}
+
+@mixin placeholder($value) {
+  &::-webkit-input-placeholder {
+    color: $value;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $value;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $value;
+    opacity: 1;
+  }
+  &:-moz-placeholder {
+    color: $value;
+    opacity: 1;
+  }
+}
+
+@mixin before {
+  position: absolute;
+  left: 0;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==laptop {
+        @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+            @content;
+        }
+    }
+    @if $breakpoint==lg {
+        @media (max-width: 1199px) {
+            @content;
+        }
+    }
+    @if $breakpoint==md {
+        @media (max-width: 991px) {
+            @content;
+        }
+    }
+    @if $breakpoint==xs {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @if $breakpoint==sm {
+        @media only screen and (min-width: 576px) and (max-width: 767px) {
+            @content;
+        }
+    }
+}

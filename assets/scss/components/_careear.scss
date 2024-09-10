@@ -1,0 +1,195 @@
+/*----------------------------------------*/
+/*  15. careear
+/*----------------------------------------*/
+.xb-careear {
+    padding: 60px 30px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    .xb-item {
+        &--shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            svg {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow: visible;
+            }
+        }
+        &--line-shape {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            bottom: 12px;
+            right: 12px;
+            z-index: -1;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &--content {
+            font-size: 12px;
+            font-weight: 400;
+            color: #1D2026;
+            background: rgba(0, 0, 0, 0.04);
+            border-radius: 80px;
+            padding: 1px 10px;
+            border: 1px solid #DDF2FF;
+            letter-spacing: -0.24px;
+            margin-bottom: 78px;
+            display: inline-block;
+            @include respond(xs) {
+                margin-bottom: 40px;
+            }
+            img,
+            svg {
+                display: inline-block;
+                margin-right: 4px;
+            }
+        }
+        &--title {
+            color: #1D2026;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.22px;
+            margin-bottom: 65px;
+            @include respond(xs) {
+                margin-bottom: 40px;
+            }
+        }
+        &--link {
+            color: #000;
+            display: inline-block;
+            padding: 7px 12px;
+            border-radius: 10px;
+            position: relative;
+            &:hover {
+                svg path {
+                    stroke: var(--color-primary);
+                }
+                span span {
+                    opacity: 1;
+                }
+            }
+            i {
+                transform: rotate(45deg);
+                font-size: 17px;
+            }
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                span {
+                    opacity: 0;
+                    @include transition(.3s);
+                }
+                svg {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    overflow: visible;
+                    path {
+                        @include transition(.3s);
+                    }
+                }
+            }
+        }
+    }
+    &.style-two {
+        .xb-item--title {
+            font-size: 45px;
+            line-height: 55px;
+            letter-spacing: -0.9px;
+            color: var(--color-white);
+        }
+        .xb-item--content {
+            color: var(--color-white);
+            border-color: #DDF2FF;
+            margin-bottom: 63px;
+        }
+        .xb-item--link {
+            svg path {
+                stroke: var(--color-primary);
+            }
+            &:hover img {
+                filter: brightness(0%);
+            }
+           img {
+                filter: brightness(1000%);
+           }
+        }
+    }
+}
+
+.career-neta {
+    .time {
+        background-color: var(--color-primary);
+        padding: 6px 10px;
+        color: #1D2026;
+        font-family: var(--font-heading);
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    .xb-item {
+        &--location {
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+    }
+}
+.career-content {
+    h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: -0.6px;
+        margin-bottom: 30px;
+        @include respond(xs) {
+            font-size: 24px;
+            letter-spacing: 0px;
+        }
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+    ul {
+        padding-left: 20px;
+        max-width: 60%;
+        margin-bottom: 40px;
+        @include respond(md) {
+            max-width: 100%;
+        }
+        li {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+.job-apply {
+    &__holder {
+        h2 {
+            font-size: 30px;
+            text-transform: uppercase;
+            letter-spacing: -0.6px;
+            margin-bottom: 20px;
+            @include respond(xs) {
+                font-size: 24px;
+                letter-spacing: 0px;
+            }
+        }
+    }
+}

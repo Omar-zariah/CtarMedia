@@ -1,0 +1,121 @@
+/*----------------------------------------*/
+/*  16. feature
+/*----------------------------------------*/
+.xb-feature {
+    position: relative;
+    padding: 60px 50px;
+    &::before,
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #B2B4A6;
+        content: "";
+    }
+    &::after {
+        bottom: 0;
+        left: 0;
+        right: auto;
+        width: 100%;
+        height: 1px;
+    }
+    &__col {
+        &:nth-child(1),
+        &:nth-child(2) {
+            .xb-feature {
+                padding-top: 40px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        &:nth-child(1) {
+            .xb-feature {
+                padding-left: 0;
+            }
+        }
+        &:nth-child(3) {
+            .xb-feature {
+                padding-left: 0;
+            }
+        }
+        &:nth-child(2),
+        &:nth-child(4) {
+            .xb-feature {
+                padding-right: 0;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .xb-feature {
+           @include respond(md) {
+            padding: 60px 50px !important;
+           }
+           @include respond(xs) {
+            padding: 40px 20px !important;
+           }
+        }
+        &:first-child {
+            .xb-feature {
+                @include respond(md) {
+                    padding-top: 0 !important;
+                }
+            }
+        }
+        &:last-child {
+            .xb-feature {
+                @include respond(md) {
+                    padding-bottom: 0 !important;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .xb-feature {
+                &::after {
+                    @include respond(md) {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+        &:nth-child(1),
+        &:nth-child(3) {
+            .xb-feature {
+                &::before {
+                    @include respond(md) {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+    .xb-item {
+        &--title {
+            font-size: 50px;
+            font-weight: 400;
+            letter-spacing: -1px;
+            color: #1D2026;
+            margin-bottom: 10px;
+            @include respond(xs) {
+                font-size: 32px;
+            }
+        }
+        &--content {
+            color: #1D2026;
+        }
+    }
+}
+.feature-shape {
+    position: absolute;
+    top: -92px;
+    right: 0;
+    @include respond(lg) {
+        max-width: 170px;
+    }
+    @include respond(xs) {
+        max-width: 80px;
+    }
+}
